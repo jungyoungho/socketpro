@@ -17,14 +17,14 @@ int main()
 	}
 
 
-	SOCKET Socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP); //ARPA ÇÁ·ÎÅäÄİ,TCP±â¹İÀÇ ¼øÂ÷Àû¾ç¹æÇâÇü ¼ÒÄÏ, TCP¸¦ ±â¹İÀ¸·ÎÇÏ´Â ¼ÒÄÏÀ» »ı¼ºÇÑ´Ù.
-	struct hostent *host; //hostent¶ó´Â ±¸Á¶Ã¼¿¡ 1Â÷¿øÆ÷ÀÎÅÍ·Î ¸â¹öº¯¼ö host¸¦ ¼±¾ğ
+	SOCKET Socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP); 
+	struct hostent *host; 
 
-	char homepage[200]; //Ãß°¡
-	cout << "¿øÇÏ´Â URL ÀÔ·Â = ";
+	char homepage[200]; 
+	cout << "ì›í•˜ëŠ” URL ì…ë ¥ = ";
 	cin >> homepage;
 
-	if ((host = gethostbyname(homepage)) == 0)  //host = gethostbyname("³»°¡¿øÇÏ´Â URL");
+	if ((host = gethostbyname(homepage)) == 0) 
 	{
 		cout << "Could not connect";
 		system("pause");
@@ -74,5 +74,5 @@ int main()
 }
 
 
-//http://nine01223.tistory.com/270 Client ÄÚµåÂüÁ¶
-//http://ryumin13.tistory.com/entry/sprintf-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0 //sprintf ÂüÁ¶
+//http://nine01223.tistory.com/270 Client ì½”ë“œì°¸ì¡°
+//http://ryumin13.tistory.com/entry/sprintf-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0 //sprintf ì°¸ì¡°
