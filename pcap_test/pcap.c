@@ -106,9 +106,6 @@ void view(u_char *user, const struct pcap_pkthdr *pkthdr, const u_char *packet)
         iph = (struct ip *)packet;
         printf("IP 패킷\n");
         printf("Version     : %d\n", iph->ip_v);
-        printf("Header Len  : %d\n", iph->ip_hl);
-        printf("Ident       : %d\n", ntohs(iph->ip_id));
-        printf("TTL         : %d\n", iph->ip_ttl);   
         printf("Src Address : %s\n", inet_ntoa(iph->ip_src));
         printf("Dst Address : %s\n", inet_ntoa(iph->ip_dst));       
 
